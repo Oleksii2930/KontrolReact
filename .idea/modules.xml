@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/kontrolwork.iml" filepath="$PROJECT_DIR$/.idea/kontrolwork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/KontrolWorkReact.iml" filepath="$PROJECT_DIR$/.idea/KontrolWorkReact.iml" />
     </modules>
   </component>
 </project>
