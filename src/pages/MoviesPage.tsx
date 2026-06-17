@@ -1,23 +1,22 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../redux/store";
-import { movieActions } from "../../redux/slices/movieSlice";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { loadMovies } from "../../redux/slices/movieSlice";
 import MoviesList from "../../components/MoviesList/MoviesList";
 
 const MoviesPage = () => {
-
     const dispatch = useAppDispatch();
 
-    const movies = useAppSelector(
-        state => state.movieStoreSlice.movies
+    const { movies } = useAppSelector(
+        state => state.movieStoreSlice
     );
 
     useEffect(() => {
-        dispatch(movieActions.getMovies());
-    }, []);
+        dispatch(loadMovies());
+    }, [dispatch]);
 
     return (
         <div>
-            <MoviesList movies={movies}/>
+            <MoviesList movies={movies} />
         </div>
     );
 };
