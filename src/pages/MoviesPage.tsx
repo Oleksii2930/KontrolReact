@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { loadMovies } from "../../redux/slices/movieSlice";
-import MoviesList from "../../components/MoviesList/MoviesList";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import { loadMovies } from "../redux/slices/movieSlice";
+import MoviesList from "../components/MoviesList/MoviesList";
 
 const MoviesPage = () => {
     const dispatch = useAppDispatch();
@@ -11,7 +11,7 @@ const MoviesPage = () => {
     );
 
     useEffect(() => {
-        dispatch(loadMovies());
+        dispatch(loadMovies(1));
     }, [dispatch]);
 
     return (
